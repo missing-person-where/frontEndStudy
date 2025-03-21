@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人简历</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style2.css">
+</head>
+<body>
+    <!-- header页眉（网页logo，导航） -->
+    <header>
+        <h1>张三的个人简介</h1>
+        <!-- nav导航 -->
+        <nav>
+            <a href="#about">关于我</a>
+            <a href="#contact">联系我</a>
+        </nav>
+    </header>
+    
+    <hr>
+
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+    
+    <!-- main主题内容 -->
+    <main>
+        <!-- section 独立内容分开 分组相关主题内容 如评论区整体-->
+        <section id="about">
+            <h2>关于我</h2> 
+            <p>我是前端开发者，热爱技术与设计！</p>
+            <!-- form 表单 -->
+            <!-- figure表示独立内容 -->
+            <figure>
+                <!-- alt属性用来描述图片内容（SEO和可访问性核心） -->
+                <img src="" alt="张三的头像" width="200px">
+                <!-- figcaption表示图片的标题或说明 -->
+                <figcaption>我的工作照</figcaption>
+            </figure>
+            
+
+
+        </section>
+        <section id="contact">
+            <h2>联系表单</h2>
+            <form action="#">
+                <div id="name">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <!-- required 必填验证 -->
+                </div>
+                
+                <div id="email">
+                    <label for="email">邮箱：</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                </div>
+
+                <div id="msg">
+                    <label for="message">留言：</label>
+                    <textarea name="message" id="message" row="6" required></textarea><br><br>
+                </div>
+
+                <button type="submit" id="btn">提交</button>
+            </form>
+        </section>
+
+        <article>
+            <p>Hello World!</p>
+        </article>
+
+    </main>
+    
+    <hr>
+
+    <!-- footer页脚 版权信息 联系方式 -->
+    <footer>
+        <p>© 2024 张三</p>
+    </footer>
+
+    <hr>
+
+    <h1>我的博客</h1>
+    <!-- 个人博客中的一篇文章 -->
+    <article>
+        <h2>如何学习HTML语义化</h2>
+        <p>语义化标签可以提升SEO</p>
+        <!-- 文章内部可以用section划分章节 -->
+        <section>
+            <h3>什么是语义化标签</h3>
+            <p>........</p>
+        </section>
+    </article>
+
+    <hr>
+
+    <h1>section与article的嵌套使用</h1>
+    <!-- 整个页面是一个大主题，用section划分区块 -->
+    <section>
+        <h1>最新文章</h1>
+        <!-- 每篇文章是独立内容，用article -->
+        <article>
+            <h2>Vue3入门教程</h2>
+            <p>....</p>
+        </article>
+        <article>
+            <h2>CSS布局指南</h2>
+            <p>...</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <h1>个人简历页面的项目经历</h1>
+    <section id="projects">
+        <h2>项目经历</h2>
+        <!-- 每个项目用div或者section细分 -->
+        <div>
+            <h3>个人博客系统</h3>
+            <p>用Vue3开发的动态博客</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <h1>技术博客的评论区</h1>
+
+    <!-- 评论区整体 -->
+    <section id="comments">
+        <h2>评论（3条）</h2>
+
+        <!-- 单条评论 -->
+        <article class="comment">
+            <h3>用户A</h3>
+            <p>这篇文章很有帮助</p>
+        </article>
+
+        <article class="comment">
+            <h3>用户B</h3>
+            <p>期待更多教程！</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <h1>图片+说明</h1>
+    <figure>
+        <img src="images/1.jpg" alt="你的意中人" width="300px">
+        <figcaption>初恋 白月光</figcaption>
+        <!-- 明确将图片与标题相关联，SEO和屏幕阅读器能更好识别内容关系 -->
+    </figure>
+
+    <h1>代码块</h1>
+    <figure>
+        <pre><code>
+            function hello(){
+                console.log("Hello World!");
+            }
+        </code></pre>
+        <figcaption>示例：JavaScript 基础函数</figcaption>
+    </figure>
+
+    <h1>引用或图表</h1>
+    <figure>
+        <blockquote>
+            <p>代码是最好的文档。</p>
+        </blockquote>
+        <figcaption>-- Grace Hopper</figcaption>
+    </figure>
+
+</body>
+</html>

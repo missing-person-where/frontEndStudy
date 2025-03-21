@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.CSS盒模型核心概念</title>
+    <style>
+        *{
+            /* width包含padding和border */
+            box-sizing: border-box; 
+            /* margin: 0px;
+            padding: 0px;
+            border:0px; */
+        }
+        #box1{
+            height: 300px;
+            width: 200px;
+            background-color: #f0f;
+            display:inline-block;
+            margin-bottom: 0px;
+        }
+        #box2{
+            height: 300px;
+            width: 200px;
+            background-color: #f00;
+            display:inline-block;
+            margin-top: 0px;
+        }
+        
+        body{
+            width: 410px;
+            height: 500px;
+            /* 默认情况下 body有外边距margin */
+            margin: 0px;  /*去除外边距*/
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+nav{
+    display: flex;
+    /* 左右分散对齐 */
+    justify-content: space-between;
+    /*  垂直居中 */
+    align-items: center;
+}
+
+/* 手机端折叠 */
+@media (max-width: 480px) {
+    nav{
+        flex-direction:column;
+    }
+}
+
+/* 悬停动画 */
+nav a{
+    /* 整个悬停动画 持续0.3s */
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+    /*  */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

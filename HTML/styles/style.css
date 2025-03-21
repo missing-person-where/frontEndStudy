@@ -1,0 +1,84 @@
+/* 1.页面居中显示 */
+body{
+    max-width: 800px;
+    margin:0 auto;      /*上下边距为0，左右自动分配（水平居中）*/
+    /* 原理 */
+    /* auto的作用：浏览器自动计算左右外边距，让元素在父容器中水平居中 */
+    /* 前提：元素必须为块级元素，如div或者设置display为block 
+        元素需要指定宽度，如width：80%或max-width:1200px
+    */
+
+    padding: 20px;
+}
+/* 2.导航栏样式 */
+nav{
+    background-color: #f0f0f0;
+    padding:10px;
+    /* 导航栏边框模拟圆弧线半径 */
+    border-radius:5px;
+}
+
+nav a{
+    color:#333;
+    /* display: none; */
+    /* 去除超链接默认下划线 */
+    text-decoration: none;
+    /* 下划线 */
+    /* text-decoration: underline; */
+    /* 上划线 */
+    /* text-decoration: overline; */
+    /* 删除线 */
+    /* text-decoration: line-through; */
+    margin-right:15px;
+}
+
+nav a:hover{
+    color:#007bff;
+}
+
+header h1{
+    color: #2c3e50;
+}
+
+section{
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 20px auto;
+}
+
+/* button{
+    margin-left:90px;
+    background-color: aqua;
+    width: 80px;
+    height: 40px;
+} */
+
+button{
+    background-color: #007bff;
+    color:white;
+    /* 去除默认边框 */
+    border: none;
+    padding: 8px 16px;
+    /* 设置鼠标悬停在按钮上小手可点击的效果 */
+    cursor: pointer;
+    margin-left: 50px;
+    transition: all 0.3s;
+}
+
+button:hover{
+    background-color: red;
+    /* scale: 95%; */
+    transform: translate(0, -2px);
+}
+
+
+/* 手机端优化 */
+@media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+    nav a {
+      display: block; /* 导航链接垂直排列 */
+      margin: 5px 0;
+    }
+}
