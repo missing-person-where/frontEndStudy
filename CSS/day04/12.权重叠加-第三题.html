@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三题</title>
+    <style>
+        /* (0, 2, 0, 0) */
+        #father #son{
+            color: blue;
+        }
+
+        /* (0, 1, 1, 1) */
+        #father p.c2{
+            color:black;
+        }
+
+        /* (0, 0, 2, 2) */
+        div.c1 p.c2{
+            color: red;
+        }
+
+        /* 继承优先级最低 */
+        #father {
+            color: green !important;
+        }
+
+        /* 继承的优先级最低 */
+        div#father.c1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="father" class="c1">
+        <p id="son" class="c2">
+            这行文本什么颜色的？
+        </p>
+    </div>
+</body>
+</html>

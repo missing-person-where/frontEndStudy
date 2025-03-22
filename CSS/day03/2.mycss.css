@@ -1,0 +1,6 @@
+/* 外部样式 */
+strong{
+    /* 设置字体为正常粗细 */
+    font-weight: normal;  
+    font-size: 40px;
+}

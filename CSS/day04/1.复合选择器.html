@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* 后代选择器：选中所有后代，包含儿子，孙子，重孙子··· */
+        /* div 中的span标签文字设置为红色 */
+        div span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <span>span 标签</span>
+    <div>
+        <span>div的儿子 span 标签</span>
+        <p>
+            <span>这是孙子span</span>
+        </p>
+    </div>
+    
+</body>
+</html>

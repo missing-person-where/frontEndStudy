@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交集选择器</title>
+    <style>
+        /* 写法：选择器1选择器2 
+        如果有标签选择器，标签选择器必须写在最前面*/
+        /* 既又的关系，既是p标签，又有box类 */
+        p.box{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="box">p 标签， 使用了类选择器</p>
+    <p>p 标签</p>
+    <div class="box">div 标签，使用类选择器</div>
+</body>
+</html>

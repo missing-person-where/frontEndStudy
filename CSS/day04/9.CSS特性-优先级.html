@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级</title>
+    <!-- 优先级高生效，选中的标签越大，优先级越低 -->
+    <!-- 通配符 < 标签 < class < id < 行内 < !important -->
+    <!-- !important 提权/优先级到最高 慎用-->
+    <style>
+        div{
+            color: green;
+        }
+
+        *{
+            color: red !important;
+        }
+
+        .box{
+            color: blue;
+        }
+
+        #test{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="test" style="color: purple;">div 标签</div>
+
+</body>
+</html>

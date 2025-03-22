@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS引入方式</title>
+    <!-- link 引入外部样式表 rel：关系，样式表 -->
+    <link rel="stylesheet" href="2.mycss.css">
+    <style>
+        /* 内部样式 */
+        p{
+            background-color: #ff0000;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>这是一个段落</p>
+    <!-- 去除strong的加粗效果 通过css，strong
+     选中设置font-weight:normal; -->
+    <strong>这是strong标签的内容</strong>
+    <!-- 行内(内联)样式 -->
+    <div style="color:aqua;font-size: 30px;">这是div标签的内容</div>
+</body>
+</html>

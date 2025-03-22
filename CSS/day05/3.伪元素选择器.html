@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        /* 默认行内 */
+        div::before{
+            content:"老鼠";
+
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            display: block;
+        }
+
+        /* 默认行内 */
+        div::after{
+            content: "大米";
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标签内容:老鼠爱大米 -->
+    <div>爱</div>
+</body>
+</html>

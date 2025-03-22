@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层叠性</title>
+    <!-- 相同属性会被后面的覆盖 -->
+    <!-- 不同属性会叠加 -->
+    <style>
+        div{
+            color: green;
+            font-size: 30px;
+        }
+
+        div{
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div>div标签</div>
+</body>
+</html>
