@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动-基本使用</title>
+    <style>
+        /* 浮动后的盒子特点：顶对齐，具备行内块显示模式特点 浮动的盒子会脱离标准文档流，相当于不占用位置*/
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+
+            float:left;
+        }
+
+        .two{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+
+            /* float: left; */
+
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+</body>
+</html>
