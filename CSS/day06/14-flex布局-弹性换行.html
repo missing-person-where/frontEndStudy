@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flex-布局-体验</title>
+    <title>flex布局-弹性换行</title>
     <style>
         .box{
             display: flex;
+            flex-wrap: wrap;
+
             justify-content: space-between;
 
-            /* height: 300px;  */
+            /* 默认值：不换行 */
+            /* flex-wrap: nowrap; */
+
+            height: 300px;
             border: 1px solid #000;
         }
 
-        .box div{
-            /* float: left;
-            margin: 50px; */
-
+        .box div {
             width: 200px;
             height: 100px;
             background-color: pink;
@@ -28,6 +30,15 @@
         <div>1</div>
         <div>2</div>
         <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
     </div>
 </body>
 </html>
