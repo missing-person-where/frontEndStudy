@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr = [1, 9, 10, 3, 2]
+    // pop() 删除数组末尾数据 并返回删除的数据
+    console.log(arr.pop())
+    console.log(arr)
+    
+    // shift() 删除数组开头元素 并返回删除数据
+    console.log(arr.shift())
+    console.log(arr)
+
+    // splice(idx, num)
+    // 从idx开始，删除num个元素
+    // num默认为数组长度
+    // arr.splice(1)
+    arr.splice(1, 1)
+    console.log(arr)
+    
+    // slice(start, end) 切片 和 python中的[a: b] 类似 左闭右开
+    
+  </script>
+</body>
+</html>

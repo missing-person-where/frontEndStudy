@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let num = 1
+    num += 1
+    console.log(num)
+    // 先自增再赋值
+    let m = ++num
+    console.log(num + ' m: ' + m)
+    // 先赋值再自增
+    m = num++
+    console.log(num + ' m : ' + m)
+    // 先自减再赋值
+    m = --num
+    console.log(num + ' m : ' + m)
+    // 先自减再赋值
+    m = num--
+    console.log(num + ' m : ' + m)
+
+    let i = 1
+    // 加了 输出 再自增
+    console.log(i++ + 1) // 2
+    // 自增 加了 再输出
+    console.log(++i + 1) // 4
+
+    i = 1
+    console.log(i++ + ++i + i) // 7
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let num1 = +prompt('输入第一个数字')
+    let operator = prompt('输入运算符')
+    let num2 = +prompt('输入第二个数字')
+    switch (operator){
+      case '+':
+        alert(`${num1} + ${num2} = ${num1 + num2}`)
+        break
+      case '-':
+        alert(`${num1} - ${num2} = ${num1 - num2}`)
+        break
+      case '*':
+        alert(`${num1} * ${num2} = ${num1 * num2}`)
+        break
+      case '/':
+        alert(`${num1} / ${num2} = ${num1 / num2}`)
+        break
+      case '%':
+        alert(`${num1} % ${num2} = ${num1 % num2}`)
+        break
+      default:
+        alert('未定义运算符')
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      margin: 10% auto;
+      width: 600px;
+      height: 300px;
+      /* background-color: skyblue; */
+      border-left: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    .box>div {
+      display: flex;
+      width: 50px;
+      background-color: yellowgreen;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .box div span {
+      margin-top: -20px;
+    }
+
+    .box div h4 {
+      margin-bottom: -35px;
+      width: 80px;
+      margin-left: -5px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    let arr = []
+    for (let i = 0; i < 4; ++i){
+      let income = prompt(`请输入第${i + 1}季度的收益`)
+      arr.push(income)
+    }
+    // 渲染内容
+    document.write(`<div class="box">`)
+    for (let i = 0; i < arr.length; ++i){
+      document.write(`
+      <div style="height: ${arr[i]}px;">
+        <span>${arr[i]}</span>
+        <h4>第${i + 1}季度</h4>
+      </div>
+    `)
+    }
+    document.write(`</div>`)
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.求两个数的和
+    function getSum(){
+      let a = +prompt('输入数字')
+      let b = +prompt('输入数字')
+      console.log(a + b)
+    }
+
+    getSum()
+ 
+    // 2. 1-100所有数的和
+    function get100(){
+      let sum = 0
+      for (let i = 1; i <= 100; ++i){
+        sum += i
+      }
+      console.log(sum)
+    }
+
+    get100()
+  </script>
+</body>
+</html>

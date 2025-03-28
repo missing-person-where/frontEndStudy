@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 字面量声明数组
+    // let arr = [1, 'blue', 2, true]
+    // 2. 使用 new Array() 构造函数声明
+    // let arr = new Array(1, 2, 3, 4)
+    // console.log(arr)
+    
+    // 数组求和
+    let arr = [2, 6, 1, 7, 4]
+    let s = 0
+    for (let i = 0; i < arr.length; ++i){
+      s += arr[i]
+    }
+    console.log(`总数：${s}`);
+    
+    console.log(`平均数: ${s / arr.length}`);
+    
+  </script>
+</body>
+</html>

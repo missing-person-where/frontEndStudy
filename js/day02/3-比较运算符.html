@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(3 > 5)
+    console.log(3 >= 3)
+    console.log(2 == 2)
+    // == 左右值是否相等
+    // 有隐式转换 把 '2' 转换成 2
+    console.log(2 == '2')
+    // === 左右两边类型和值都相等 一般用这个判断是否相等
+    console.log(2 === '2')
+    console.log(NaN == NaN) // NaN与所有东西都不相等 包含她自己
+    
+    // !== 左右两边不全等
+    console.log(2 != '2')  // false 对应 ==
+    console.log(2 !== '2') // true  对应 ===
+
+    // 字符串比较按照ASSCII
+    console.log('-----------')
+    console.log('a' < 'b')
+    console.log('aa' < 'ab')
+    console.log('aa' < 'aac')
+    console.log('----------')
+
+    // 浮点数有精度问题，一般不直接比较浮点数
+    console.log(0.1 + 0.2)
+    console.log((0.1*10 + 0.2*10) / 10)
+    
+  </script>
+</body>
+</html>

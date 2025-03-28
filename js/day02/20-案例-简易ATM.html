@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let deposit = 0
+    while (true){
+      let choice = +prompt(`选择操作:
+      1.存钱
+      2.取钱
+      3.查询余额
+      4.退出`)
+      if (choice === 4){
+        break
+      }
+      
+      switch (choice) {
+        case 1:
+          let cun = +prompt(`输入存取的金额`)
+          deposit += cun
+          break;
+        case 2:
+          let qu =  +prompt(`输入要取的金额`)
+          deposit -= qu
+          break;
+        case 3:
+          alert(`当前余额为${deposit}`)
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
