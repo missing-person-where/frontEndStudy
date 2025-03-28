@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 规则一 +号左右两边有一个字符串另外一个会被隐式转换成字符串
+    console.log(1 + 1)
+    console.log('pink' + 1) // 隐式转换1为'1'
+    console.log(2 + 2)
+    console.log(2 + '2') // 22
+    // 规则二 出来+号比如 - * /等都会把数据转成数字类型
+    console.log(2 - 2)
+    console.log(2 - '2')
+    console.log(2 * '2')
+    console.log(2 / '2')
+    console.log(2 % '2')
+
+    console.log(+12)
+    // 技巧：
+    // +号作为正号解析可以转换成数字型
+    // 任何数据和字符串相加结果都是字符串
+    console.log(+'123')  // 转换为数字型
+    
+  </script>
+</body>
+</html>
