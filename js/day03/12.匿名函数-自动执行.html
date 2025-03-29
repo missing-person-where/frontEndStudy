@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let num = 10
+    // let num = 20
+    // (function(){
+    //   console.log(11)
+    // })()
+
+    // 立即执行函数的优势：防止同名变量污染
+    // (function(){
+    //   let num = 10
+    // })(); // 加分号结束
+
+    // (function(){
+    //   let num = 10
+    // })();
+
+    // 1. 第一种写法
+    (function(a, b){
+      console.log(a + b)
+    })(1, 2);
+
+    // 简写
+    ((a, b) => console.log(a * b))(1, 2);
+    // 存在多个匿名函数，必须 ; 分开 否则会报错
+
+    // 2. 第二种写法
+    (function (x, y) {
+      console.log(x + y)
+    }(1, 3));
+
+    // (function(){})()
+    // (function(){}())
+    // (function fun(){}())
+  </script>
+</body>
+</html>

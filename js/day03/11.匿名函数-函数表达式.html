@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 函数表达式
+    fn(1, 2) // 错误，先声明后使用
+    let fn = function(a, b){
+      // console.log('我是函数表达式')
+      console.log(a + b)
+    }
+    console.log(fn)
+
+    // 函数表达式 和 具名函数的不同 function fn(){}
+    // 1. 具名函数的调用可以写到任何位置
+    // 2. 函数表达式，必须先写表达式（let修饰），后调用
+    function fun(){
+      console.log(1)
+    }
+    fun()
+  </script>
+</body>
+</html>

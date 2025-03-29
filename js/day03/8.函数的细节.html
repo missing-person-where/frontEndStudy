@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 同名函数，后面的会覆盖前面的
+    // function fn(){
+    //   return 10
+    // }
+    // function fn(){
+    //   return 20
+    // }
+    // let result = fn()
+    // console.log(result) // 20
+    // 2. 不支持函数重载
+    // function add(a, b){
+    //   return a + b
+    // }
+
+    // function add(a, b, c){
+    //   return a + b + c
+    // }
+
+    // let s = add(2, 3) // NaN
+    // console.log(s)
+    // s = add(2, 3, 4)
+    // console.log(s) // 9
+    
+    // 3. 参数不匹配
+    function add(a, b){
+      console.log(a + b)
+    }
+    // 1. 实参多于形参
+    add(1, 2, 3)  // a = 1, b = 2, 3传不过去
+    // 2. 实参等于形参
+    add(1, 9)  // a = 1, b = 9  10
+    // 3. 实参小于形参  
+    add(1) // a = 1, b = undefined NaN
+  </script>
+</body>
+</html>

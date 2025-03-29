@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(Boolean('red'));
+    console.log(Boolean(''))
+    console.log(Boolean(0))
+    console.log(Boolean(90))
+    console.log(Boolean(-90))
+    console.log(Boolean(undefined))
+    console.log(Boolean(null))
+    console.log(Boolean(NaN))
+    
+    console.log('--------------');
+    
+    if (true) {
+      console.log(11)
+    }
+
+    console.log('' + 2) // 2
+    console.log(null + 2) // 2
+    // '' null 数字转换会变成0
+    console.log(undefined + 2) // NaN
+    // undefined 经过数字转换会变成NaN
+    console.log('转换', Number(undefined))
+    
+    console.log(NaN + 2) // NaN
+    
+  </script>
+</body>
+</html>

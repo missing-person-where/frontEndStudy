@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    (function(){
+      let second = +prompt('输入秒数')
+      let h = parseInt(second / 60 / 60 % 24)
+      let m = parseInt(second / 60 % 60)
+      let s = parseInt(second % 60)
+      h < 10 ? h = '0' + h : 0
+      m = m < 10 ? '0' + m : m
+      s = s < 10 ? '0' + s : s
+      document.write(`<h2>转换成时分秒为${h}时${m}分${s}秒</h2>`)
+    })();
+    console.log(h)
+  </script>
+</body>
+</html>
