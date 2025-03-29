@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 函数的返回值
+    function fn(){
+      return 20
+    }
+    console.log(fn())  // fn() =20
+    
+    // 求和
+    function add(x = 0, y = 0){
+      return x + y
+      // return后面的语句永远也不会执行
+      console.log('hello World')
+    }
+    let sum = add(3, 4)
+    console.log(sum)
+    console.log(add(100, 300))
+    
+    // 最大公约数 gcd
+    function gcd(a = 0, b = 0){
+      return !b ? a : gcd(b, a % b)
+    }
+    let a = +prompt('输入一个数')
+    let b = +prompt('输入一个数')
+    console.log(`${a}和${b}的最大公约数为${gcd(a, b)}`)
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getSum(x = 0, y = 0){
+      // 函数不设置默认参数。那么默认值是undefined
+      // console.log(x, y)
+      document.write(x + y)
+    }
+    getSum(1, 2)
+    getSum()
+
+    // 求start到end的值
+    function getSum(start=0, end=0){
+      let s = 0
+      for (let i = start; i <= end; ++i){
+        s += i
+      }
+      console.log(s)
+    }
+    getSum(50, 100)
+  </script>
+</body>
+</html>
