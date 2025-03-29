@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      /* margin: 0; */
+      padding: 0;
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+      height: 70px;
+    }
+
+    .box>div {
+      border: 1px solid #000;
+      width: 70px;
+      height: 70px;
+      text-align: center;
+      line-height: 70px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>冒泡排序动画</h3>
+  <div class="box">
+    <div>5</div>
+    <div>4</div>
+    <div>3</div>
+    <div>2</div>
+    <div>1</div>
+  </div>
+  <div class="1"></div>
+  <div class="2"></div>
+  <div class="3"></div>
+  <div class="4"></div>
+  <div class="5"></div>
+  <script>
+    // 创建一个延迟函数
+    function sleep(ms){
+      return new Promise(resolve =>
+        setTimeout(resolve, ms)
+      )
+    }
+    // 1. 获取所有的子div
+    let div = document.querySelector('.box')
+    // console.log(div)
+    let divs = div.querySelectorAll('div')
+    /* console.log(divs)
+    console.log(divs.length) */
+
+    async function bubbleSort(){
+      for (let i = 0; i < divs.length; ++i) {
+        for (let j = 0; j < divs.length - i - 1; ++j) {
+          // 每次比较前延迟1秒
+          await sleep(1000)
+          let a = +divs[j].innerText
+          let b = +divs[j + 1].innerText
+          // console.log(a, b)
+          if (a > b) {
+            let tp = a
+            divs[j].style.backgroundColor = 'red'
+            divs[j + 1].style.backgroundColor = 'red'
+            await sleep(1000)
+            divs[j].innerHTML = divs[j + 1].innerHTML
+            divs[j + 1].innerHTML = tp
+          }
+          // setTimeout(() => {
+          //   console.log('延迟一会执行下一次循环');
+          // }, 2000)
+          // 设置一个定时器，每2秒执行一次，进入循环代码会立即执行，无法完成这个效果
+          divs[j].style.backgroundColor = 'yellow'
+          divs[j + 1].style.backgroundColor = 'yellow'
+        }
+        
+        // 渲染第n次比较的结果
+        let str = ''
+        str += `第${i + 1}次比较后：`
+        for (let j = 0; j < divs.length; ++j){
+          str += `${divs[j].innerText} `
+        }
+        // console.log(String(i + 1), str)
+        newdiv = document.getElementsByClassName(String(i + 1))[0]
+        // console.log(newdiv)
+        newdiv.innerHTML = str;
+      }  
+    }
+    
+    bubbleSort()
+  </script>
+</body>
+
+</html>
