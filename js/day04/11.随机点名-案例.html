@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let names = ['赵云','黄忠','关羽','张飞','马超','刘备','曹操']
+    // 1. 得到一个随机数 names数组索引 取值范围是 [0, names.length - 1]
+    function getRandInt(N, M){
+      return parseInt(Math.random() * (M - N + 1)) + N
+    }
+    let idx = getRandInt(0, names.length - 1)
+    document.write(names[idx])
+
+    // splice(idx, n) idx:索引 n: 删除个数
+    names.splice(idx, 1)
+    console.log(names)
+    
+  </script>
+
+</body>
+</html>

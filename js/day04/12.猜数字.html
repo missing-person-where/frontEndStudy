@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getRandInt(N, M){
+      return parseInt(Math.random() * (M - N + 1)) + N
+    }
+
+    let ans = getRandInt(0, 100)
+    // while (true){
+    //   let num = +prompt('输入一个数字')
+    //   if (num == ans){
+    //     alert('猜对了')
+    //     break
+    //   }else if (num < ans){
+    //     alert('猜小了')
+    //   }else{
+    //     alert('猜大了')
+    //   }
+    // }
+
+    alert('猜数字1 - 100)，你现在只有三次机会')
+    let num
+    for (let i = 1; i <= 3; ++i){
+      num = +prompt('输入一个数字')
+      if (num == ans){
+        alert('猜对了')
+        break
+      }else if (num < ans){
+        alert('猜小了' + '还有' + (3 - i) + '次机会')
+      }else{
+        alert('猜大了'  + '还有' + (3 - i) + '次机会')
+      }
+    }
+    if (num != ans){
+      alert('三次机会用光了也没猜对')
+    }
+  </script>
+</body>
+</html>

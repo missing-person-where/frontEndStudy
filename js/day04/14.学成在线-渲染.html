@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学成在线</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+
+    <!-- 精品推荐课程 -->
+    <div class="course wrapper">
+        <!-- 标题 -->
+        <div class="hd">
+            <h3>精品推荐</h3>
+            <a href="#" class="more">查看全部</a>
+        </div>
+        <!-- 内容 -->
+        <div class="bd">
+            <ul>
+                <script>
+                  let data = [
+                    {
+                      src:'uploads/class1.png',
+                      title:'ThinkPHP5.0博客系统实战项目演练',
+                      num:1125
+                    },
+                    {
+                      src:'uploads/class2.png',
+                      title:'Android网络动态图片加载实战',
+                      num:1357
+                    },
+                    {
+                      src:'uploads/class3.png',
+                      title:'Angular2大前端商城实战项目演练',
+                      num:22250
+                    },
+                    {
+                      src:'uploads/class4.png',
+                      title:'Angular2大前端商城实战项目演练',
+                      num:22250
+                    },
+                    {
+                      src:'uploads/class3.png',
+                      title:'Angular2大前端商城实战项目演练',
+                      num:22250
+                    },
+                    {
+                      src:'uploads/class4.png',
+                      title:'Angular2大前端商城实战项目演练',
+                      num:22250
+                    },
+                    {
+                      src:'uploads/class2.png',
+                      title:'Android网络动态图片加载实战',
+                      num:1357
+                    },
+                  ]
+                  for (let i = 0; i < data.length; ++i){
+                    document.write(`
+                      <li>
+                        <a href="#">
+                            <div class="pic"><img src="${data[i].src}" alt=""></div>
+                            <div class="text">
+                                <h4>${data[i].title}</h4>
+                                <p><span>高级</span> · <i>${data[i].num}</i>人在学习</p>
+                            </div>
+                        </a>
+                      </li>
+                    `)
+                  }
+               </script>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

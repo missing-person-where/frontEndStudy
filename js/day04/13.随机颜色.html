@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin: 50px auto;
+      background-color: pink;
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <div></div>
+  
+  <script>
+    function getRandInt(N, M){
+      return parseInt(Math.random() * (M - N + 1)) + N
+    }
+
+    function getRandomColor(flag){
+      let color = '';
+      if (flag){
+        color += '#'
+        let available_characters = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+        for (let i = 0; i < 6; ++i){
+          let r = getRandInt(0, available_characters.length - 1)
+          color += available_characters[r]
+        }
+      }else {
+        // color += 'rgb('
+        // for (let i = 0; i < 3; ++i){
+        //   let r = getRandInt(0, 255)
+        //   color += r
+        //   if (i != 2){
+        //     color += ','
+        //   }
+        // }
+        // color += ')'
+        let r = getRandInt(0, 255)
+        let g = getRandInt(0, 255)
+        let b = getRandInt(0, 255)
+        return `rgb(${r}, ${g}, ${b})`
+      }
+      return color
+    }
+
+    console.log(getRandomColor(true))
+    console.log(getRandomColor(false))
+    console.log(getRandomColor())
+
+    let c = getRandomColor(false)
+    console.log('c: ' + c)
+    
+    let div = document.getElementsByTagName('div')[0]
+    div.style.backgroundColor = c
+    
+  </script>
+</body>
+</html>
