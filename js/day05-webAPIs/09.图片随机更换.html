@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="" alt="">
+  <script>
+    function getRandInt(N, M){
+      return parseInt(Math.random() * (M - N + 1) + N)
+    }
+    const arr = ['1.jpg', '1_.jpg', '1.gif', '18.jpg']
+    const img = document.querySelector('img')
+    let random = getRandInt(0, arr.length)
+    img.src = `./images/${arr[random]}`  
+
+  </script>
+</body>
+</html>

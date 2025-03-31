@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: url(./images/1_.jpg) no-repeat top center/cover;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function getRandInt(N, M){
+      return parseInt(Math.random() * (M - N + 1) + N)
+    }
+    const arr = ['1.jpg', '1_.jpg', '1.gif', '18.jpg']
+    const body = document.body
+    const random = getRandInt(0, arr.length)
+    body.style.backgroundImage = `url(./images/${arr[random]})`
+
+  </script>
+</body>
+</html>

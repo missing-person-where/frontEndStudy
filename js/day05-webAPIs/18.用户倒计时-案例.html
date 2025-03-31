@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <textarea name="" id="" cols="30" rows="10">
+    用户注册协议
+    欢迎注册成为京东用户!在您注册过程中，您需要完成我们的注册流程并通过点击同意的形式在线签署以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意（尤其是以粗体或下划线标识的条款，因为这些条款可能会明确您应履行的义务或对您的权利有所限制》。
+  </textarea>
+  <br>
+  <button class="btn" disabled>我已经阅读用户协议(5)</button>
+  <script>
+    // let i = 1
+    // setInterval(() => {
+    //   i++
+    //   console.log(i)
+    // }, 1000)
+    // 1. 获取元素
+    const btn = document.querySelector('.btn')
+    // console.log(btn.innerHTML)  // buttton按钮特殊用innerHTML
+    
+    // 2. 倒计时
+    let i = 5
+    // 2.1 开启定时器
+    let n = setInterval(function(){
+      i--
+      btn.innerHTML = `我已经阅读用户协议(${i})`
+      if (i == 0) {
+        clearInterval(n)
+        // 定时器停了，就可以开按钮了
+        btn.disabled = false
+        btn.innerHTML = `同意`
+      }
+    }, 1000)
+  </script>
+</body>
+</html>

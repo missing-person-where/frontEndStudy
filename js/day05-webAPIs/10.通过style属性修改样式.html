@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    const box = document.querySelector('.box')
+    // 对象.style.样式属性 = '值' 别忘了加单位
+    box.style.width = '300px'
+    // 多组单词的采取小驼峰命名法
+    box.style.backgroundColor = 'hotpink'
+    box.style.border = '2px solid blue'
+    box.style.borderTop = '2px solid red'
+  </script>
+</body>
+</html>

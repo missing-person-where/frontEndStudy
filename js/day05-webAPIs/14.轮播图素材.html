@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+      width: 500px;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slider-wrapper {
+      width: 100%;
+      height: 320px;
+    }
+
+    .slider-wrapper img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .slider-footer {
+      height: 80px;
+      background-color: rgba(100, 67, 68);
+      padding: 12px 12px 0 12px;
+      position: relative;
+    }
+
+    .slider-footer .toggle {
+      position: absolute;
+      right: 0;
+      top: 12px;
+      display: flex;
+    }
+
+    .slider-footer .toggle button {
+      margin-right: 12px;
+      width: 28px;
+      height: 28px;
+      appearance: none;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .slider-footer .toggle button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .slider-footer p {
+      margin: 0;
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .slider-indicator {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .slider-indicator li {
+      width: 8px;
+      height: 8px;
+      margin: 0;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0.4;
+      cursor: pointer;
+    }
+
+    .slider-indicator li.active {
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class='slider'>
+    <div class='slider-wrapper'>
+      <img src="./images/slider1.jpg" alt="">
+    </div>
+    <div class='slider-footer'>
+      <p>对人类来说是不是太超前了</p>
+      <ul class='slider-indicator'>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class='toggle'>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const sliderData = [
+      {url:'./images/slider1.jpg',title:'对人类来说会不会太超前了？',color:'rgb(100,67,68)'},
+      {url:'./images/slider2.jpg',title:'开启剑与雪的黑暗传说!',color:'rgb(43,35,26)'},
+      {url:'./images/slider3.jpg',title:'真正的jo厨出现了！',color:'rgb(36,31,33)'},
+      {url:'./images/slider4.jpg',title:'李玉刚:让世界通过B站看到东方大国文化',color:'rgb(139,98,66)'},
+      {url:'./images/slider5.jpg',title: '快来分享你的寒假日常吧',color: 'rgb(67,90, 92)'},
+    ]
+
+    // 1. 生成随机数
+    function getRandInt(N, M){
+      return parseInt(Math.random() * (M - N + 1) + N)
+    }
+    const index = getRandInt(0, sliderData.length - 1)
+    console.log(index)
+    console.log(sliderData[index])
+    // 2. 更换图片
+    const img = document.querySelector('.slider-wrapper img')
+    img.src = sliderData[index].url
+    
+    // 3. 更换p中的内容
+    const p = document.querySelector('.slider-footer p')
+    console.log(p)
+    
+    p.innerHTML = sliderData[index].title
+
+    const div = document.querySelector('.slider-footer')
+    div.style.backgroundColor = sliderData[index].color
+
+    // 4. 获取小圆点
+    li = document.querySelector(`.slider-indicator li:nth-child(${index + 1})`)
+    console.log(li)
+    // li.classList.toggle('active')
+    // 给li添加active类
+    li.classList.add('active')
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="nav">
+    <li>我的首页</li>
+    <li>产品介绍</li>
+    <li>联系方式</li>
+  </ul>
+
+  <p id="nav">导航栏</p>
+
+  <script>
+    const lis = document.querySelectorAll('.nav li')
+    for (let i = 0; i < lis.length; ++i){
+      console.log(lis[i])  // 每一个li对象
+    }
+
+    const p = document.querySelectorAll('#nav')
+    console.log(p)
+    p[0].style.color = 'blue'
+  </script>
+</body>
+</html>

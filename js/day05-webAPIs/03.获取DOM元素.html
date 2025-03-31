@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">123</div>
+  <div class="box">abc</div>
+  <p id="nav">导航栏</p>
+  <ul>
+    <li>测试1</li>
+    <li>测试2</li>
+    <li>测试3</li>
+  </ul>
+  <script>
+    // 1. 获取匹配的第一个元素
+    // const box = document.querySelector('div')
+    // const box = document.querySelector('.box')
+    // console.log(box)
+    const nav = document.querySelector('#nav')
+    // console.log(nav)
+    nav.style.color = 'red'
+    // 1. 获取第一个li
+    // const li = document.querySelector('ul li:first-child')
+    // console.log(li)
+    // 2. 选择所有的li
+    const lis = document.querySelectorAll('ul li')
+    console.log(lis)
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrapper {
+      margin: 150px auto;
+      width: 840px;
+      height: 420px;
+      background: url(./images/1.gif) no-repeat center / cover;
+      padding: 100px 250px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <strong>牛马教育年会抽奖</strong>
+    <h1>一等奖: <span id="one">???</span></h1>
+    <h3>二等奖: <span id="two">???</span></h3>
+    <h5>三等奖: <span id="three">???</span></h5>
+  </div>
+  <script>
+    // 1. 声明数组
+    const personArr = ['周杰伦','刘德华','周星驰', 'Pink老师','张学友']
+    // 2. 一等奖
+    let random = parseInt(Math.random() * personArr.length)
+    let name = personArr[random]
+    console.log(name)
+    personArr.splice(random, 1)
+    const one = document.querySelector('#one') 
+    one.innerHTML = name
+    console.log(personArr);
+    // 2. 二等奖
+    random = parseInt(Math.random() * personArr.length)
+    name = personArr[random]
+    console.log(name)
+    personArr.splice(random, 1)
+    const two = document.querySelector('#two') 
+    two.innerHTML = name
+    console.log(personArr);
+    // 3. 三等奖
+    random = parseInt(Math.random() * personArr.length)
+    name = personArr[random]
+    console.log(name)
+    personArr.splice(random, 1)
+    const three = document.querySelector('#three') 
+    three.innerHTML = name
+    console.log(personArr);
+  </script>
+</body>
+</html>
