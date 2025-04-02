@@ -427,6 +427,23 @@ box.innerHTML = '<strong>我要更换的内容</strong>'
   * 在标签一律以data-开头
   * 在DOM对象上一律用dataset对象方式获取
 
+```html
+<div data-id="1" data-spm="不知道">1</div>
+  <div data-id="2">2</div>
+  <div data-id="3">3</div>
+  <div data-id="4">4</div>
+  <div data-id="5">5</div>
+  <script>
+    const one = document.querySelector('div')
+    console.log(one.dataset)
+    console.log(one.dataset.id)   // 1
+    console.log(one.dataset.spm)  // 不知道
+
+  </script>
+```
+
+
+
 
 
 ### 定时器-间歇函数
@@ -447,3 +464,49 @@ box.innerHTML = '<strong>我要更换的内容</strong>'
    ```
 
    * 作用：每隔一段时间调用这个函数
+   * 注意：
+     1. 函数名**不需要加括号**
+     2. **定时器返回的是一个id数字**
+
+2. **关闭定时器**
+
+   ```javascript
+   let 变量名 = setInterval(函数, 间隔时间)
+   clearInterval(变量名)
+   ```
+
+   一般不会刚创建就停止，而是满足一定条件再停止
+
+```javascript
+// setInterval(函数, 间隔时间)
+// setInterval(()=>{
+//   console.log('一秒执行一次')
+// }, 1000)
+
+function fn() {
+    console.log('一秒钟执行一次')
+}
+// setInterval(函数名, 间隔时间) 函数名不要加小括号
+let n = setInterval(fn, 1000)
+// setInterval('fn()', 1000)
+console.log(n)
+// 关闭定时器
+// clearInterval(n)
+
+// console.log('你好啊');
+
+// let m = setInterval(function() {
+//   console.log(12);
+// }, 1000)
+// console.log(m)
+
+// const num = 10
+// num = 10
+// console.log(num)
+```
+
+综合案例
+
+1. 用户协议倒计时
+2. 轮播图计时版
+
