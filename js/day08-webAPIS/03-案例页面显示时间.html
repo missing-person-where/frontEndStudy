@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 40px;
+      border: 1px solid pink;
+      text-align: center;
+      line-height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <script>
+    // 显示当前时间，以 YYYY-MM-DD HH:mm:ss形式显示在页面
+    const div = document.querySelector('div')
+    function getMyDate(){
+      const date = new Date()
+      let year = date.getFullYear()
+      if (year / 10 === 0){
+        year = "000" + year;
+      } else if (year / 100 === 0) {
+        year = "00" + year
+      } else if (year / 1000 === 0) {
+        year = "0" + year;
+      }
+      const month = date.getMonth()
+      const day = date.getDate()
+      let hours = date.getHours()
+      hours = hours < 10 ? "0" + hours : hours;
+      let minutes = date.getMinutes()
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      let second = date.getSeconds()
+      second = second < 10 ? "0" + second : second
+      return `今天是:${year}-${month+1}-${day} ${hours}:${minutes}:${second}`
+    }
+    
+    div.innerHTML = getMyDate()
+
+    setInterval(function() {
+      div.innerHTML = getMyDate()
+    }, 1000)
+  </script>
+</body>
+</html>

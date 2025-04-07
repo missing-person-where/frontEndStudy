@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 40px;
+      border: 1px solid pink;
+      text-align: center;
+      line-height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <script>
+    // 显示当前时间，以 YYYY-MM-DD HH:mm:ss形式显示在页面
+    const div = document.querySelector('div')
+    const date = new Date()
+    div.innerHTML = date.toLocaleString()  // 2025/4/6 21:54:47
+    // 得到日期对象
+    setInterval(function() {
+      const date = new Date()
+      div.innerHTML = date.toLocaleString()  // 2025/4/6 21:54:47
+    }, 1000)
+    // div.innerHTML = date.toLocaleDateString()  // 2025/4/6
+    // div.innerHTML = date.toLocaleTimeString()  // 21:56:09
+
+  </script>
+</body>
+</html>

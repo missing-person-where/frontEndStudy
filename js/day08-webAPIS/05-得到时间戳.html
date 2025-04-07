@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // 1. getTime()
+    const date = new Date()
+    console.log(date.getTime())
+    // 2.+new Date()
+    // console.log(new Date())
+    console.log(+new Date())  // 涉及隐式转换
+    // 3. Date.now()
+    console.log(Date.now())  
+    
+    // 2.+new Date()
+    console.log(+new Date())
+    console.log('--------------')
+    console.log(+new Date('2022-4-1 18:30:00'))
+    
+    // 根据日期 Day() 0-6 返回的是星期一..
+    const arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+    console.log(new Date().getDay())
+    console.log(arr[new Date().getDay()])
+    
+  </script>
+</body>
+</html>
