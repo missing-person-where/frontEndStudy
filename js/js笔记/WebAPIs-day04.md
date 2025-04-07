@@ -129,12 +129,10 @@
 * **兄弟节点查找：**
 
   1. 下一个兄弟查找
-
-  * nextElementSibling属性
+     * nextElementSibling属性
 
   2. 上一个兄弟节点
-
-  * previousElementSibling属性
+     * previousElementSibling属性
 
 #### 增加节点
 
