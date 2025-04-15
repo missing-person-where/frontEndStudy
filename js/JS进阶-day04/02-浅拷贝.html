@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj = {
+      uname: 'pink', 
+      age: 18, 
+      family: {
+        baby: '小pink'
+      }
+    }
+    // 浅拷贝
+    // const o = {...obj}
+    const o = {}
+    Object.assign(o, obj)
+    console.log(o)  
+    o.age = 20
+    o.family.baby = '老baby'
+    console.log(o)  
+    console.log(obj) 
+    
+  </script>
+</body>
+</html>

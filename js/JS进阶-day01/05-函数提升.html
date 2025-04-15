@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function fn(){
+    //   console.log('函数提升')
+    // }
+    // 1. 会把所有函数声明提升到当前作用域的最前面
+    // 2. 只提升函数声明，不提升函数调用
+    fn()
+    function fn(){
+      console.log('函数提升')
+    }
+
+    fun()  // 提升声明，但是不提升赋值，因此报错
+    var fun = function() {
+      console.log('函数表达式')
+    }
+    // 函数表达式必须先赋值，再调用
+  </script>
+</body>
+</html>

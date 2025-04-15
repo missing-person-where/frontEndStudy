@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 给数组扩展求最大值和求和方法
+    // 1. 我们定义的方法，任何一个数组实例都可以使用
+    // 2. 自定义的方法 写道 数组.prototype 身上
+    // 1. 求最大值
+    // const arr = [1, 2, 3]
+    const arr = new Array(1, 2, 3)
+    // console.log(arr)
+    Array.prototype.max = function() {
+      // console.log(this)  // [1, 2, 3]
+      // 数组展开
+      return Math.max(...this)
+      // 原型函数指向实例对象 arr
+    }
+
+    Array.prototype.min = function() {
+      // console.log(this)  // [1, 2, 3]
+      // 数组展开
+      return Math.min(...this)
+      // 原型函数指向实例对象 arr
+    }
+    console.log(arr.max())  //  3
+    console.log([2, 5, 9].max())  // 9
+    console.log(arr.min())  // 1
+    
+    Array.prototype.sum = function() {
+      return this.reduce((pre, cur)=>pre + cur)
+    }
+    console.log(arr.sum())  // 9
+    console.log([1.2, 2.4, 1.4].sum()) // 5
+    
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj = {
+      uname: 'pink', 
+      age: 18, 
+      hobby: ['乒乓球', '足球'], 
+      family: {girl: 'Lpink', boy: 'Rpink'}
+    }
+    // 对象转成 JSON 字符串
+    // JSON.stringify(obj)
+    const o = JSON.parse(JSON.stringify(obj))
+    o.family.girl = '121'
+    console.log(obj)
+    
+  </script>
+</body>
+</html>

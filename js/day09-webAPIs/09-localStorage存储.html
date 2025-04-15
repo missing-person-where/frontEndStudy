@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 存储方式
+    //  要存储一个名字 uname, 张无忌
+    // localStorage.setItem('键', '值')
+    localStorage.setItem('uname', '张无忌')
+    // 2. 获取方式
+    // localStorage.getItem(key)
+    console.log(localStorage.getItem('uname'));
+    // 3. 删除本地存储  只删除名字
+    // localStorage.removeItem('uname')
+    // 4. 修改  如果原来有这个key，就是改；否则是增
+    localStorage.setItem('uname', '殷素素')
+
+    // 存储年龄
+    // 本地存储只能存储字符串数据类型
+    localStorage.setItem('age', 18)
+    console.log(localStorage.getItem('age'))  // 得到的是字符串
+    
+  </script>
+</body>
+</html>

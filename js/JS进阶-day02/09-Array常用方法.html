@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // const arr = ['red', 'blue', 'green']
+    // const re = arr.find(function(element) {
+    //   return element === 'blue'
+    // })
+    // console.log(re) // red
+    
+    // const data = [
+    //   {
+    //     name: '小米',
+    //     price: 1999
+    //   },
+    //   {
+    //     name: '华为',
+    //     price: 3999
+    //   },
+    // ]
+    // // 筛选小米的品牌 filter过滤
+    // const mi = data.find(ele=>{
+    //   console.log(111)  // 只会循环一次
+    //   return ele.name === '小米'
+    // })
+    // console.log(mi)  // {name: '小米', price: 1999}
+
+    const arr = [0, 0, 0, 1]
+    const ret = arr.every(ele => ele === 0)
+    console.log(ret)  // false
+    console.log([10, 20, 30].every(ele => ele >= 10))  // true
+    
+    console.log([10, 20, 30].some(ele => ele >= 20))  // true
+    
+  </script>
+</body>
+</html>

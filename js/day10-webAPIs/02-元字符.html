@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // // 元字符
+    // console.log(/哈/.test('哈'))  // true
+    // console.log(/哈/.test('哈哈哈'))  // true
+    // console.log(/哈/.test('二哈'))  // true
+    // // 1. 边界符
+    // ^控制以什么开头  $控制以什么结尾
+    // console.log(/^哈/.test('哈'))  // true
+    // console.log(/^哈/.test('哈哈'))  // true
+    // console.log(/^哈/.test('二哈'))  // false
+    // console.log(/^哈$/.test('哈'))  // true
+    // // 精确匹配 只能是 哈 才为true
+    // console.log(/^哈$/.test('哈哈'))  // false
+    // console.log(/^哈$/.test('哈不哈'))  // false
+    // console.log(/^哈$/.test('二哈'))  // false
+    
+    // // 量词 * 类似 >=0 次
+    // console.log('-------------')
+    // console.log(/^哈$/.test('哈'))  // true
+    // console.log(/^哈*$/.test(''))  // true
+    // console.log(/^哈*$/.test('哈'))  // true
+    // console.log(/^哈*$/.test('哈哈'))  // true
+    // console.log(/^哈*$/.test('二哈太傻啦'))  // false
+    // console.log(/^哈*$/.test('哈不哈'))  // false
+    // console.log('----------------')
+    
+    // // 量词 + 类似 >=1 次
+    // console.log('-------------')
+    // console.log(/^哈+$/.test('哈'))  // true
+    // console.log(/^哈+$/.test(''))  // false
+    // console.log(/^哈+$/.test('哈'))  // true
+    // console.log(/^哈+$/.test('哈哈'))  // true
+    // console.log(/^哈+$/.test('二哈太傻啦'))  // false
+    // console.log(/^哈+$/.test('哈不哈'))  // false
+    // console.log('----------------')
+    
+    // // 量词 ？ 类似 0 || 1 次
+    // console.log(/^哈?$/.test(''))  // true
+    // console.log(/^哈?$/.test('哈'))  // true
+    // console.log(/^哈?$/.test('哈哈'))  // false
+    // console.log(/^哈?$/.test('二哈太傻啦'))  // false
+    // console.log(/^哈?$/.test('哈不哈'))  // false
+    
+    // 量词 {n} 写几就出现几次
+    console.log('----------------')
+    console.log(/^哈{4}$/.test(''))
+    console.log(/^哈{4}$/.test('哈'))
+    console.log(/^哈{4}$/.test('哈哈'))
+    console.log(/^哈{4}$/.test('哈哈哈'))
+    console.log(/^哈{4}$/.test('哈哈哈哈'))  // true
+    console.log(/^哈{4}$/.test('哈哈哈哈哈'))
+    console.log(/^哈{4}$/.test('哈哈哈哈哈哈'))
+    console.log('----------------')
+    
+    // 量词 {n, } >= n 次
+    console.log('----------------')
+    console.log(/^哈{4,}$/.test(''))
+    console.log(/^哈{4,}$/.test('哈'))
+    console.log(/^哈{4,}$/.test('哈哈'))
+    console.log(/^哈{4,}$/.test('哈哈哈'))
+    console.log(/^哈{4,}$/.test('哈哈哈哈'))  // true
+    console.log(/^哈{4,}$/.test('哈哈哈哈哈')) // true
+    console.log(/^哈{4,}$/.test('哈哈哈哈哈哈')) // true
+    console.log('----------------')
+
+    // 量词 {n,m} [n,m] 次 逗号左右两侧不能有空格
+    console.log('----------------')
+    console.log(/^哈{4,5}$/.test(''))
+    console.log(/^哈{4,5}$/.test('哈'))
+    console.log(/^哈{4,5}$/.test('哈哈'))
+    console.log(/^哈{4,5}$/.test('哈哈哈'))
+    console.log(/^哈{4,5}$/.test('哈哈哈哈'))  // true
+    console.log(/^哈{4,5}$/.test('哈哈哈哈哈')) // true
+    // 易错：逗号左右两侧不能有空格 否则视为普通字符
+    console.log(/^哈{4, 5}$/.test('哈哈哈哈哈')) // true
+    console.log(/^哈{4,5}$/.test('哈哈哈哈哈哈')) 
+    console.log('----------------')
+
+    // 字符类 [abc] 出现任意一个字符（只选择一个匹配上的字符）
+    console.log(/^[abc]$/.test('a'))  // true
+    console.log(/^[abc]$/.test('b'))  // true
+    console.log(/^[abc]$/.test('c'))  // true
+    console.log(/^[abc]$/.test('ca'))  // false
+    console.log(/^[abc]{2}$/.test('ca'))  // true
+    console.log('----------------')
+
+    // 字符类 [a-z] 选择a到z其中一个
+    console.log(/^[a-z]$/.test('p'))  // true
+    console.log(/^[A-Z]$/.test('p'))  // false
+    console.log(/^[0-9]$/.test('6'))  // true
+    console.log(/^[a-zA-Z0-9]$/.test('3'))  // true
+    console.log(/^[a-zA-Z0-9]$/.test('p'))  // true
+    console.log(/^[a-zA-Z0-9]$/.test('P'))  // true
+    console.log(/^[^a-zA-Z0-9]$/.test('P'))  // false
+    console.log('----------------')
+ 
+    console.log(/^.$/.test(''))  // false
+    console.log(/^.$/.test('\n'))  // false
+    console.log(/^.$/.test('a'))
+    console.log(/^.$/.test('0'))
+    console.log(/^.$/.test('A'))
+    console.log(/^.$/.test(' '))
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>我是老大</li>
+  </ul>
+  <script>
+    // // 1. 创建节点
+    // const div = document.createElement('div')
+    // 2. 追加节点
+    // div.innerHTML = '这是一个新创建的div'
+    // // console.log(div)
+    // document.body.appendChild(div)
+    const ul = document.querySelector('ul')
+    const li = document.createElement('li')
+    li.innerHTML = '我是新创建的li标签'
+    // ul.appendChild(li)
+    // ul.children
+    // 3. 插入节点到某个子元素之前
+    // insertBefore(放哪个元素，放到哪个元素的前面)
+    ul.insertBefore(li, ul.children[0])
+    
+  </script>
+</body>
+</html>

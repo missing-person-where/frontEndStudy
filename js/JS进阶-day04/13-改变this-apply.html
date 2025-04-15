@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj = {
+      uname: 'pink'
+    }
+    function fn(x, y) {
+      console.log(this)
+      console.log(x, y)
+    }
+    // 1. 调用函数
+    // 2. 改变this指向
+    // fn.apply(thisArg, [argsArray])
+    // fn()
+    fn.apply(obj, [1, 2])
+    // 3. 返回值：调用函数的返回值
+
+    // 使用场景：求数组最大值
+    const arr = [100 ,44, 77]
+    const max = Math.max.apply(Math, arr)
+    const min = Math.min.apply(null, arr)
+    console.log(max, min)
+
+    // 使用场景：求数组最大值
+    console.log(Math.max(...arr))
+    
+  </script>
+</body>
+</html>

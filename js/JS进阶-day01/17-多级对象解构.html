@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const pig = {
+    //   name: '佩奇',
+    //   family: {
+    //     mother: '猪妈妈', 
+    //     father: '猪爸爸',
+    //     sister: '乔治'
+    //   },
+    //   age: 10
+    // }
+    // // 多级对象解构
+    // const {name, family:{mother, father, sister}, age} = pig
+    // console.log(name)
+    // console.log(mother)
+    // console.log(father)
+    // console.log(sister)
+    // console.log(age)
+    
+    const person = [
+      {
+        name: '佩奇',
+        family: {
+          mother: '猪妈妈', 
+          father: '猪爸爸',
+          sister: '乔治'
+        },
+        age: 10
+      }
+    ]
+    const [{name, family:{mother, father, sister}, age}] = person
+    console.log(name)
+    console.log(mother)
+    console.log(father)
+    console.log(sister)
+    console.log(age)
+    
+  </script>
+</body>
+</html>

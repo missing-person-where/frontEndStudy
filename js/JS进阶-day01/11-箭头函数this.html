@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script> 
+    // // this指向： 谁调用这个函数，this就指向谁
+    // console.log(this)   // window
+    // // 普通函数
+    // function fn() {
+    //   console.log(this)  // window
+    // }
+    // window.fn()  // window
+
+    // // 对象方法里面的this
+    // const obj = {
+    //   name: 'andy', 
+    //   sayHi: function() {
+    //     console.log(this)  // obj
+    //   }
+    // }
+    // obj.sayHi()
+
+    // 2. 箭头函数的this  是上一层作用域链的this
+    // const fn = ()=>{
+    //   console.log(this)  // window
+    // }
+    // fn()
+    // // 对象方法的箭头函数的 this
+    // const obj = {
+    //   uname: 'red', 
+    //   sayHi: ()=>{
+    //     console.log(this)  // this指向 window
+    //   },
+    //   p: this
+    // }
+    // console.log(obj.p)   // window
+    // obj.sayHi()    // window
+
+    const obj = {
+      uname: '张三',
+      sayHi: function() {
+        console.log(this)   // obj
+        let i = 10
+        const count = ()=>{
+          console.log(this)  // obj
+        }
+        count()
+      }
+    }
+    console.log(obj.sayHi())
+
+  </script>
+</body>
+</html>

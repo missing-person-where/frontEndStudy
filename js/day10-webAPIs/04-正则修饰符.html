@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    console.log(/^java$/.test('java'))  // true
+    console.log(/^java$/.test('JAVA'))  // false
+    // i（ignore）不区分大小写
+    console.log(/^java$/i.test('JAVA'))  // true
+    console.log(/^java$/i.test('Java'))  // true
+
+    const str = 'java是一门编程语言，学完JAVA工资很高'
+    // 只能查找并替换一个
+    const re = str.replace(/java/i, '前端')
+    console.log(str)
+    console.log(re)
+    // const re2 = str.replace(/java/ig, '前端')
+    // const re2 = str.replace(/java/gi, '前端')
+    const re2 = str.replace(/java|JAVA/g, '前端')
+    console.log(str)
+    console.log(re2)
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 利用箭头函数求和
+    const getSum = (...arr)=>{
+      // arguments  // Uncaught ReferenceError: arguments is not defined
+      let sum = 0
+      for (let i = 0; i < arr.length; ++i){
+        sum += arr[i]
+      }
+      return sum
+    }
+    const res = getSum(2, 3, 4)
+    console.log(res)  // 5
+  </script>
+</body>
+</html>

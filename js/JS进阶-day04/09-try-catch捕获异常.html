@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>123</p>
+  <script>
+    function fn() {
+      try {
+        // 可能出错的代码
+        const p = document.querySelector('.p')
+        p.style.color = 'red'
+      } catch (err) {
+        // 拦截错误，提示浏览器提供的错误信息，但是不中断程序的执行
+        console.log(err.message)
+        // 需要加return才能中断程序
+        throw new Error('选择器出错了')
+        // return
+      } finally {
+        // 不管程序是否报错，一定会执行
+        alert('弹出对话框')
+      }
+
+      console.log(111)
+    }
+    fn()
+  </script>
+</body>
+
+</html>

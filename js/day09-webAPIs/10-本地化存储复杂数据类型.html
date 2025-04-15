@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj = {
+      uname: '张三', 
+      age: 18,
+      gender: '男'
+    }
+    // // 存储复杂数据类型   无法直接使用
+    // localStorage.setItem('obj', obj)
+    // // 取
+    // console.log(localStorage.getItem('obj'))  [object object]
+    
+    // 1. 复杂数据类型存储必须转换成 JSON字符串存储
+    console.log(JSON.stringify(obj))
+    localStorage.setItem('obj', JSON.stringify(obj))
+    // 取
+    // JSON 对象  属性和值有引号。而且引号统一是双引号
+    // {"uname":"张三","age":18,"gender":"男"}
+    // console.log(localStorage.getItem('obj'))
+    // console.log(typeof localStorage.getItem('obj'))
+    // 2. 把JSON字符串转换为  对象
+    console.log(JSON.parse(localStorage.getItem('obj')))
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fn(x, y) {
+      if (!x || !y) {
+        // throw '传参有误'
+        throw new Error('传参有误')
+      }
+
+      return x + y
+    }
+    console.log(fn())
+    
+  </script>
+
+</body>
+
+</html>

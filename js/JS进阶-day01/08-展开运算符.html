@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const arr1 = [1, 2, 3, 4, 5]
+    // console.log(...arr)  // 1 2 3 4 5
+
+    console.log(Math.max(1, 2, 3))  // 3
+    // 求数组最大值和最小值
+    // ...arr === 1, 2, 3....
+    console.log(Math.max(...arr1))   // 5
+    console.log(Math.min(...arr1))   // 1
+    
+    // 合并数组
+    const arr2 = [11, 7, 9]
+    const arr = [...arr1, ...arr2]
+    console.log(arr)   // [1, 2, 3, 4, 5, 11, 7, 9]
+  </script>
+</body>
+</html>

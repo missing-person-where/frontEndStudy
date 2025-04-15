@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .name .tag {
+      font-size: 16px;
+      color: #8a8787;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="name">
+  </p>
+  <script>
+    const gift = '50g茶叶,清洗球'
+    // const arr = gift.split(',').map(item => `
+    //   <span class="tag">【赠品】${item}</span>
+    // `)
+    // document.querySelector('.name').innerHTML = arr.join('<br>')
+
+    document.querySelector('.name').innerHTML = gift.split(',').map(item => `<span class="tag">【赠品】${item}</span>`).join('<br>')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // constructot   构造函数
+    function Star() {
+
+    }
+    // Star.prototype.sing = function() {
+    //   console.log('唱歌')
+    // }
+    // Star.prototype.dance = function() {
+    //   console.log('跳舞')
+    // }
+    console.log(Star.prototype)
+    Star.prototype = {
+      // 重新指回原来创造原型对象的构造函数
+      constructor: Star,
+      sing: function() {
+        console.log('唱歌')
+      }, 
+      dance: function() {
+        console.log('跳舞')
+      }, 
+    }
+    console.log(Star.prototype)
+
+    // const ldh = new Star()
+    // console.log(Star.prototyper)
+    // console.log(Star.prototype.constructor === Star)  // true
+    
+  </script>
+</body>
+</html>

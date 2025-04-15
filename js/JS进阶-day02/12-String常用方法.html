@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. split
+    // const str = 'red,blue,green'
+    // console.log(str.split(','))  // ['red', ' blue', ' green']
+    
+    // const str1 = '2022-4-8'
+    // const arr1 = str1.split('-')
+    // console.log(arr1)  // ['2022', '4', '8']
+    
+    // 2. substring
+    const str = 'hello World!'
+    console.log(str.substring(6))  // World!
+    console.log(str.substring(6, 11)) // World [6, 11) 左闭右开
+    
+    // 3. startsWith endsWith
+    console.log("helloworld".startsWith('hello'))  // true
+    console.log("helloworld".startsWith('hi'))  // false
+    console.log("helloworld".startsWith("hello", 2))  // false
+    
+    console.log("helloworld".endsWith('world'))  // true
+    console.log("helloworld".endsWith('word'))  // false
+    console.log("helloworld".endsWith("hello", 6))  // false
+    
+    // 4. includes
+    console.log("helloworld".includes("owo"))  // true
+    console.log("helloworld".includes("owo", 5))  // false
+    
+    // 5. 转大小写
+    console.log("helloWOrlD".toUpperCase())  // HELLOWORLD
+    console.log("helloWOrlD".toLowerCase())  // helloworld
+    
+    // 6. indexof
+    console.log("hellohe".indexOf('he'))  // 0
+    console.log("hellow".indexOf("owo")) // -1
+
+    // 7. replace
+    console.log("helloworldhello".replace("hello", "hi"))  // hiworldhello
+    const pt = /\d+/
+    console.log("abc121abda0131afaj1312".replace(pt, "_"))
+    console.log("abc121abda0131afaj1312".replace(/[a-z]+/g, "*"))  // *121*0131*1312
+    
+    // 8. match
+    console.log("abedHelloworlDgth".match('[a-e]'))  // ['a', index: 0, input: 'abedhelloworldgth', groups: undefined]
+    console.log("abedhelloworldgth".match(/[a-h]/gi))  //  ['a', 'b', 'e', 'd', 'h', 'e', 'd', 'g', 'h']
+    
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const o = { uname: 'pink', age: 18 }
+    // 1. 获得所有属性名
+    console.log(Object.keys(o))  // ['uname', 'age']
+    // 2. 获得所有属性值
+    console.log(Object.values(o))  // ['pink', 18]
+    
+    // 3. 对象的拷贝
+    // const oo = {}
+    // // (target, source)
+    // Object.assign(oo, o)
+    // console.log(oo)  // {uname: 'pink', age: 18}
+    // 用于给对象追加属性
+    Object.assign(o, {gender: '女'})
+    console.log(o)  // {uname: 'pink', age: 18, gender: '女'}
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const arr = ['red', 'blue', 'pink']
+    // // forEach遍历  缺点：不能修改数组的值
+    // arr.forEach(function(ele, index, array){
+    //   console.log(ele)   // 当前遍历到的元素 必选
+    //   console.log(index)  // 索引 可选
+    //   console.log(array)  // 当前遍历的数组 可选
+    //   console.log(this)
+    // }, arr)  // 第二个参数arr表示执行回调函数中this的值 可选
+
+
+    // 1. 数组map方法  处理数据并返回一个新数组
+    const newarr = arr.map(function(ele, index) {
+      // console.log(ele)  // 当前遍历到的元素
+      // console.log(index)  // 索引号
+      return ele + '颜色'
+    })
+    console.log(newarr)
+    
+    // 2. 数组join方法  把数组转换成字符串
+    // 小括号为空默认以逗号分割
+    console.log(newarr.join())  // red颜色,blue颜色,pink颜色
+    // 参数为空字符串，元素之间没有分隔符
+    console.log(newarr.join(''))  // red颜色blue颜色pink颜色
+    console.log(newarr.join('|'))  // red颜色|blue颜色|pink颜色
+    
+  </script>
+</body>
+</html>
