@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">0</div>
+  <script src="./lodash.min.js"></script>
+  <script>
+    // 利用防抖实现性能优化
+    // 需求：鼠标在盒子上移动，里面的数字就会变化 + 1
+    const box = document.querySelector('.box')
+    let i = 1
+    function mouseMove() {
+      box.innerHTML = i++
+      // 如果里面存在大量消耗性能的代码，比如dom操作，比如数据处理，可能造成卡顿
+    }
+    // 添加事件
+    // box.addEventListener('mousemove', mouseMove)
+
+    // 利用lodash库实现防抖 - 500ms之后采取+1
+    // 语法：_.throttle(fun, 时间)
+    // box.addEventListener('mousemove', _.throttle(mouseMove, 3000))
+    
+    // 手写节流函数
+    // 1.声明一个定时器变量
+    // 2.当鼠标每次移动都需要判断是否有定时器，如果有定时器就不开启新定时器
+    // 3.如果没有定时器开启定时器，需要存到变量中
+    // -定时器里面调用执行的函数
+    // -定时器里面需要把定时器清空
+    function throttle(fn, t) {
+      // 声明一个记录定时器的变量
+      let timer = null
+      return function () {
+        if (!timer) {
+          timer = setTimeout(function () {
+            fn()
+            // fn执行完毕关闭定时器
+            // 不能用clearTimeout
+            timer = null
+          }, t)
+        }
+      }
+    }
+    box.addEventListener('mousemove', throttle(mouseMove, 500))
+  </script>
+</body>
+
+</html>

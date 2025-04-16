@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let timer = null
+    timer = setTimeout(() => {
+      clearTimeout(timer)
+      console.log(timer)  // 结果：1
+    }, 1000)
+
+    // 在setTimeout 中是无法删除定时器的，因为定时器还在运作，所以使用 timer = null 而不是clearTimeout(timer)
+  </script>
+</body>
+</html>
